@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <title>Магазин LED Світла</title>
+    <link rel="shortcut icon" href="img/ico.ico">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <a href="#" class="header__logo"><img class="logo__img" src="img/logo.jpg" alt="logo">Магазин LED
+                    Світла</a>
+                <nav class="header__menu menu">
+                     <!-- Кнопка "Контакти" -->
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <button onclick="showContactPopup()">Контакти</button>                            
+                            <!-- Випливаючий блок для контактів -->
+                            <div id="contactPopup" class="contact-popup">
+                                <p class="menu__link">Номер телефону: <a href="tel:+380509007920">+380 50 900 79 20</a></p>
+                                <p class="menu__link">Електронна пошта: <a href="mailto:gavrish.alex.1989@gmail.com">gavrish.alex.1989@gmail.com</a></p>
+                            </div>                           
+                        </li>                       
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <page class="page">
+            <section class="page__main main-block">
+                <div class="main-block__container">
+                    <div class="main-block__body body-main-block">
+                        <div class="body-main-block__content content-main-block">
+                            <div class="content-main-block__body">
+                                <div class="content-main-block__sub-title">Ліхтарики з функцією Power Bank.</div>
+                                <h1 class="content-main-block__title">Ліхтар акумуляторний usb ліхтарі на сонячних
+                                    батареях потужний ручний ліхтарик.</h1>
+                                <div class="content-main-block__text">
+                                    <p>Переносний світлодіодний ліхтар відмінно підійде для дому, відпочинку на природі,
+                                        ремонту авто у темний час доби та є
+                                        портативним зарядним пристроєм з акумулятором на сонячній панелі.</p>
+                                    <p>Ліхтар оснащений потужними LED світлодіодами та 4-ма режимами освітлення,
+                                        включаючи "аварійний" червоно-синій.
+                                        Ліхтар можна заряджати від мережі 220V або сонячної панелі. Через вбудований
+                                        USB-порт можна заряджати телефони та
+                                        планшети (Функція Power Bank)</p>
+                                    <p>4 режими освітлення!</p>
+                                    <p>Ліхтар має 4 різних режими освітлення:
+                                        Прямий: потужно висвітлює на дальній відстані.
+                                        Прямий великий: дозволяє висвітлити як прямо, так і навколо по всій ширині.
+                                        Великий: режим освітлення широкого простору, великої кімнати або вечірні
+                                        посиденьки біля намету.
+                                        Аварійний, SOS: моргаюче червоно-синє світло.</p>
+                                    <p class="made-in">Виробник: ТУРЕЧЧИНА</p>
+                                </div>
+                            </div>                            
+                        </div>
+                        <!-- Slider main container -->
+                        <div class="body-main-block__slider slider-main-block swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="slider-main-block__wrapper swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="slider-main-block__slide swiper-slide">
+                                    <img src="img/main/01.jpg" alt="Slider Image">
+                                </div>
+                                <div class="slider-main-block__slide swiper-slide">
+                                    <img src="img/main/02.jpg" alt="Slider Image">
+                                </div>
+                                <div class="slider-main-block__slide swiper-slide">
+                                    <img src="img/main/03.jpg" alt="Slider Image">
+                                </div>
+                                <div class="slider-main-block__slide swiper-slide">
+                                    <img src="img/main/05.jpg" alt="Slider Image">
+                                </div>
+                                <div class="slider-main-block__slide swiper-slide">
+                                    <img src="img/main/04.jpg" alt="Slider Image">
+                                </div>                                
+                            </div>
+                        </div>
+                        <div class="body-main-block__arrows">
+                            <div class="body-main-block__arrow swiper-button-prev"></div>
+                            <div class="body-main-block__arrow swiper-button-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="form">
+                    <div class="form--block__container">
+                        <!-- <title>Форма замовлення</title> -->
+                        <h2>Зробіть своє замовлення</h2>
+                        <form action="mailto:mayor4ik89@ukr.net" method="post">
+                            <label for="product"><span class="form__text">Ліхтарики з функцією Power Bank</span></label>
+                            <select id="product" name="product">
+                                <option value="">Ліхтарики з функцією Power Bank</option>
+                            </select>
+                            <br>
+                            <label for="quantity"><span class="form__text">Кількість:</span></label>
+                            <input type="number" id="quantity" name="Lihtariki_Power_Bank">
+                            <br>
+                            <input type="submit" value="Замовити">
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </page>
+        <footer class="footer">
+            <div class="footer__content">
+                <p>© Інтернет магазин «LED Світла»</p>
+            </div>           
+        </footer>
+    </div>
+
+
+    <script>
+        // Функція для відображення випливаючого блоку
+        function showContactPopup() {
+            var popup = document.getElementById("contactPopup");
+            if (popup.style.display === "none" || popup.style.display === "") {
+                popup.style.display = "block";
+            } else {
+                popup.style.display = "none";
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
